@@ -12,44 +12,91 @@ namespace Task_4
         {
             #region Задание 1.Случайная матрица
 
-            //            Что нужно сделать
-            //Выведите на экран матрицу заданного размера и заполните её случайными числами.Детальный алгоритм работы приложения:
+            // Console.Write("Введите количество строк: ");
+            // int row = int.Parse(Console.ReadLine());
+            // Console.Write("Введите количество столбцов: ");
+            // int col = int.Parse(Console.ReadLine());
 
-            //Сначала пользователю предлагается ввести количество строк в будущей матрице.
-            //Затем — ввести количество столбцов в будущей матрице.
-            //Когда данные будут получены, нужно создать в памяти матрицу заданного размера.
-            //Используя Random, заполнить матрицу случайными целыми числами.
-            //Вывести полученную матрицу на экран.
-            //Вывести сумму всех элементов этой матрицы на экран отдельной строкой.
-            //Рекомендация
-            //Для работы с матрицами используйте вложенные циклы.
+            // int[,] arr2d = new int[row, col];
 
-            //Что оценивается
-            //Программа выводит на экран случайно созданную матрицу предварительно заданного размера, а также сумму всех элементов в ней.
+            // Random r = new Random();
+            // int nvSum=0;
+
+            // for (int i = 0; i < row; i++)
+            // {
+            //     for (int j = 0; j < col; j++)
+            //     {
+            //         arr2d[i, j] = r.Next(100);
+            //         Console.Write($"{arr2d[i, j]} ");
+            //         nvSum = nvSum + arr2d[i,j];
+            //     }
+            //     Console.WriteLine();
+            // }
+
+            //Console.WriteLine($"Сумма всех элементов = " +  nvSum);
+            // Console.ReadKey();
+
+            #endregion
+            #region Задание 2.Сложение матриц
+
+
             Console.Write("Введите количество строк: ");
             int row = int.Parse(Console.ReadLine());
             Console.Write("Введите количество столбцов: ");
             int col = int.Parse(Console.ReadLine());
 
-            int[,] arr2d = new int[row, col];
-
+            int[,] arrA2d = new int[row, col];
+            int[,] arrB2d = new int[row, col];
+            int[,] arrC2d = new int[row, col];
             Random r = new Random();
-            int nvSum=0;
-
+            Console.WriteLine();
+            Console.WriteLine("Полученная матрица");
             for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < col; j++)
                 {
-                    arr2d[i, j] = r.Next(100);
-                    Console.Write($"{arr2d[i, j]} ");
-                    nvSum = nvSum + arr2d[i,j];
+                    arrA2d[i, j] = r.Next(100);
+                    arrB2d[i, j] = r.Next(100);
+                    arrC2d[i, j] = (arrA2d[i, j] + arrB2d[i, j]);
+                    Console.Write($"{arrC2d[i, j]} ");
+                }
+                Console.WriteLine();
+                }
+            Console.ReadLine();
+
+            Console.WriteLine("Первая матрица");
+            for (int i = 0; i < row; i++)
+            {
+                
+                for (int j = 0; j < col; j++)
+                {
+                    Console.Write($"{arrA2d[i, j]} ");
+                }
+                Console.WriteLine();   
+            }
+            Console.WriteLine();
+            Console.WriteLine("Вторая матрица");
+            for (int i = 0; i < row; i++)
+            {
+                
+                for (int j = 0; j < col; j++)
+                {
+                    Console.Write($"{arrB2d[i, j]} ");
                 }
                 Console.WriteLine();
             }
-
-           Console.WriteLine($"Сумма всех элементов = " +  nvSum);
+            Console.WriteLine();
+            Console.WriteLine("Сумма матриц");
+            for (int i = 0; i < row; i++)
+            {
+                
+                for (int j = 0; j < col; j++)
+                {
+                    Console.Write($"{arrC2d[i, j]} ");
+                }
+                Console.WriteLine();
+            }
             Console.ReadKey();
-
             #endregion
         }
     }
