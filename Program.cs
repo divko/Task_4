@@ -61,24 +61,24 @@ namespace Task_4
                     Console.Write($"{arrC2d[i, j]} ");
                 }
                 Console.WriteLine();
-                }
+            }
             Console.ReadLine();
 
             Console.WriteLine("Первая матрица");
             for (int i = 0; i < row; i++)
             {
-                
+
                 for (int j = 0; j < col; j++)
                 {
                     Console.Write($"{arrA2d[i, j]} ");
                 }
-                Console.WriteLine();   
+                Console.WriteLine();
             }
             Console.WriteLine();
             Console.WriteLine("Вторая матрица");
             for (int i = 0; i < row; i++)
             {
-                
+
                 for (int j = 0; j < col; j++)
                 {
                     Console.Write($"{arrB2d[i, j]} ");
@@ -89,7 +89,7 @@ namespace Task_4
             Console.WriteLine("Сумма матриц");
             for (int i = 0; i < row; i++)
             {
-                
+
                 for (int j = 0; j < col; j++)
                 {
                     Console.Write($"{arrC2d[i, j]} ");
@@ -98,6 +98,10 @@ namespace Task_4
             }
             Console.ReadKey();
             #endregion
+            
         }
     }
 }
+
+
+    
